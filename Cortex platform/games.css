@@ -272,7 +272,7 @@ body.menu-expanded button path {
 /*=== HOME =================================*/
 
 #home {
-  height: 73.5rem;
+  height: 80rem;
 
   padding-block: 0;
   padding-top: calc(4.1rem + var(--nav-height));
