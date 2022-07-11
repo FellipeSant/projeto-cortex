@@ -49,16 +49,6 @@ function activateMenuAtCurrentSection(section){
 
 }
 
-const nav = document.createElement('nav') 
-function showNavOnScroll(){
-    if (scrollY > 0){
-        nav.classList.add('scroll')
-    }
-    else {
-        nav.classList.remove('scroll')
-    }
-}
-
 function showBackToTopButtonOnScroll(){
     if(scrollY > 550){
         backToTopButton.classList.add('show')
@@ -77,7 +67,6 @@ function closeMenu(){
 
 onScroll()
 function onScroll() {
-    showNavOnScroll()
     showBackToTopButtonOnScroll()
 
     activateMenuAtCurrentSection(home)

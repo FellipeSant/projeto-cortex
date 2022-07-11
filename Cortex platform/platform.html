@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma CorteX</title>
+
+    <link rel="stylesheet" href="./platform.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
+        rel="stylesheet"
+    />
+
+</head>
+<body>
+    <nav id="navigation">
+        <div class="wrapper">
+            <a class="logo" href="#home">
+                <img src="../assets/logo.png" alt="logo do projeto cortex"/>
+            </a>
+            <div class="menu">
+                <ul>
+                    <li>
+                        <a onclick="closeMenu()" href="#home" class="active">Conteúdos</a>
+                    </li>
+
+                    <li>
+                        <a onclick="closeMenu()" href="./simulators.html">Simuladores</a>
+                    </li>
+
+                    <li>
+                        <a onclick="closeMenu()" href="./games.html">Jogos</a>
+                    </li>
+                </ul>
+
+                    <a class="button" onclick="closeMenu()" href="../index.html">HOME</a>
+
+                    <ul class="social-links">
+                        <li>
+                            <a target="_blank" href="https://instagram.com">
+                                <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M17 1.99997H7C4.23858 1.99997 2 4.23855 2 6.99997V17C2 19.7614 4.23858 22 7 22H17C19.7614 22 22 19.7614 22 17V6.99997C22 4.23855 19.7614 1.99997 17 1.99997Z"
+                                        stroke="#FFFAF1"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    />
+                                    <path
+                                        d="M15.9997 11.3701C16.1231 12.2023 15.981 13.0523 15.5935 13.7991C15.206 14.5459 14.5929 15.1515 13.8413 15.5297C13.0898 15.908 12.2382 16.0397 11.4075 15.906C10.5768 15.7723 9.80947 15.3801 9.21455 14.7852C8.61962 14.1903 8.22744 13.4229 8.09377 12.5923C7.96011 11.7616 8.09177 10.91 8.47003 10.1584C8.84829 9.40691 9.45389 8.7938 10.2007 8.4063C10.9475 8.0188 11.7975 7.87665 12.6297 8.00006C13.4786 8.12594 14.2646 8.52152 14.8714 9.12836C15.4782 9.73521 15.8738 10.5211 15.9997 11.3701Z"
+                                        stroke="#FFFAF1"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    />
+                                    <path
+                                        d="M17.5 6.49997H17.51"
+                                        stroke="#FFFAF1"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    />
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://facebook.com">
+                                <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M18 1.99997H15C13.6739 1.99997 12.4021 2.52675 11.4645 3.46444C10.5268 4.40212 10 5.67389 10 6.99997V9.99997H7V14H10V22H14V14H17L18 9.99997H14V6.99997C14 6.73475 14.1054 6.4804 14.2929 6.29286C14.4804 6.10533 14.7348 5.99997 15 5.99997H18V1.99997Z"
+                                        stroke="#FFFAF1"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    />
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://youtube.com">
+                                <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M22.5396 6.42C22.4208 5.94541 22.1789 5.51057 21.8382 5.15941C21.4976 4.80824 21.0703 4.55318 20.5996 4.42C18.8796 4 11.9996 4 11.9996 4C11.9996 4 5.1196 4 3.3996 4.46C2.92884 4.59318 2.50157 4.84824 2.16094 5.19941C1.82031 5.55057 1.57838 5.98541 1.4596 6.46C1.14481 8.20556 0.990831 9.97631 0.999595 11.75C0.988374 13.537 1.14236 15.3213 1.4596 17.08C1.59055 17.5398 1.8379 17.9581 2.17774 18.2945C2.51758 18.6308 2.93842 18.8738 3.3996 19C5.1196 19.46 11.9996 19.46 11.9996 19.46C11.9996 19.46 18.8796 19.46 20.5996 19C21.0703 18.8668 21.4976 18.6118 21.8382 18.2606C22.1789 17.9094 22.4208 17.4746 22.5396 17C22.852 15.2676 23.0059 13.5103 22.9996 11.75C23.0108 9.96295 22.8568 8.1787 22.5396 6.42Z"
+                                        stroke="#FFFAF1"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    />
+                                    <path
+                                        d="M9.75 15.02L15.5 11.75L9.75 8.48001V15.02Z"
+                                        stroke="#FFFAF1"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    />
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.tiktok.com/pt-BR/">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    x="0px"
+                                    y="0px"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 172 172"
+                                    stroke="#FFFAF1"
+                                >
+                                    <g
+                                        fill="none"
+                                        fill-rule="nonzero"
+                                        stroke="none"
+                                        stroke-width="1"
+                                        stroke-linecap="butt"
+                                        stroke-linejoin="miter"
+                                        stroke-miterlimit="10"
+                                        stroke-dasharray=""
+                                        stroke-dashoffset="0"
+                                        font-family="none"
+                                        font-weight="none"
+                                        font-size="none"
+                                        text-anchor="none"
+                                        style="mix-blend-mode: normal"
+                                    >
+                                        <path
+                                            d="M0,172v-172h172v172z"
+                                            fill="none"
+                                        ></path>
+                                        <g fill="#FFFAF1">
+                                            <path
+                                                d="M43,21.5c-11.78895,0 -21.5,9.71105 -21.5,21.5v86c0,11.78895 9.71105,21.5 21.5,21.5h86c11.78895,0 21.5,-9.71105 21.5,-21.5v-86c0,-11.78895 -9.71105,-21.5 -21.5,-21.5zM43,35.83333h86c4.04938,0 7.16667,3.11728 7.16667,7.16667v86c0,4.04938 -3.11729,7.16667 -7.16667,7.16667h-86c-4.04938,0 -7.16667,-3.11729 -7.16667,-7.16667v-86c0,-4.04938 3.11728,-7.16667 7.16667,-7.16667zM86,50.16667v50.16667c0,4.04938 -3.11728,7.16667 -7.16667,7.16667c-4.04938,0 -7.16667,-3.11728 -7.16667,-7.16667c0,-4.04938 3.11728,-7.16667 7.16667,-7.16667v-14.33333c-11.78895,0 -21.5,9.71105 -21.5,21.5c0,11.78895 9.71105,21.5 21.5,21.5c11.78895,0 21.5,-9.71105 21.5,-21.5v-27.00098c4.41573,3.14559 9.02368,5.50098 14.33333,5.50098v-14.33333c-0.33922,0 -5.28417,-1.56995 -8.73437,-4.57715c-3.45021,-3.0072 -5.59896,-6.78208 -5.59896,-9.75618z"
+                                            ></path>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="mailto:proje.cortex@gmail.com">
+                                <svg
+                                            width="24"
+                                            height="24"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z"
+                                                stroke="var(--headline)"
+                                                stroke-width="2"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                            />
+                                            <path
+                                                d="M22 6L12 13L2 6"
+                                                stroke="var(--headline)"
+                                                stroke-width="2"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                            />
+                                        </svg>
+                            </a>
+                        </li>
+                    </ul>
+            </div>
+
+            <button
+            aria-expanded="false"
+            aria-label="Abrir menu"
+            onclick="openMenu()"
+            class="open-menu"
+        >
+            <svg
+                width="40"
+                height="40"
+                viewBox="0 0 40 40"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                    d="M10 20H30"
+                    stroke="var(--headline)"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                />
+                <path
+                    d="M10 12H30"
+                    stroke="var(--headline)"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                />
+                <path
+                    d="M18 28L30 28"
+                    stroke="var(--headline)"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                />
+            </svg>
+            </button>
+
+            <button
+            aria-expanded="true"
+            aria-label="Fechar menu"
+            onclick="closeMenu()"
+            class="close-menu"
+        >
+            <svg
+                width="40"
+                height="40"
+                viewBox="0 0 40 40"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                    d="M30 10L10 30M10 10L30 30"
+                    stroke="#5CA598"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                />
+            </svg>
+            </button>
+        </div>
+    </nav>
+
+    <section id="home">
+        <div class="wrapper">
+            <div class="col-a">
+                <h1>Conteúdos de Física</h1>
+                <svg 
+                width="699" height="4" viewBox="0 0 699 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0L699 0.8V4L0 3.2V0Z" fill="#5CA598"/>
+                </svg>
+                    
+            </div>
+
+            <div class="col-b">
+                <ul>
+                    <li id="img-1">
+                        <a href="../Cortex videos page/video-page-1.html">  
+                            <img src="../assets/Mask 1.png" alt="">
+                        </a>
+                        <p>Albert Einstein</p>
+                        
+                    </li>
+
+                    <li id="img-2">
+                        <a href="">
+                            <img src="../assets/Mask 2.png" alt="">
+                        </a>
+                        <p>Sem conteúdo</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-c">
+                <h1>Conteúdos de Química</h1>
+                <svg 
+                width="699" height="4" viewBox="0 0 699 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0L699 0.8V3.99992L0 3.19992V0Z" fill="#5CA598"/>
+                </svg>
+            </div>
+
+            <div class="col-d">
+                <ul>
+                    <li id="img-3">
+                        <a href="">
+                            <img src="../assets/Mask 4.png" alt="">
+                        </a>
+                        <p>Sem conteúdo</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="wrapper">
+            <div class="col-a">
+                <a class="logo" href="#home">
+                    <svg
+                        width="194"
+                        height="98"
+                        viewBox="0 0 194 98"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                    >
+                        <path
+                            d="M0.632 92V75.2H6.848C8.192 75.2 9.304 75.424 10.184 75.872C11.064 76.32 11.72 76.936 12.152 77.72C12.584 78.504 12.8 79.384 12.8 80.36C12.8 81.288 12.592 82.144 12.176 82.928C11.76 83.696 11.112 84.32 10.232 84.8C9.352 85.264 8.224 85.496 6.848 85.496H3.704V92H0.632ZM3.704 83H6.656C7.728 83 8.496 82.768 8.96 82.304C9.44 81.824 9.68 81.176 9.68 80.36C9.68 79.528 9.44 78.88 8.96 78.416C8.496 77.936 7.728 77.696 6.656 77.696H3.704V83ZM15.1381 92V80.096H17.8741L18.1621 82.328C18.5941 81.56 19.1781 80.952 19.9141 80.504C20.6661 80.04 21.5461 79.808 22.5541 79.808V83.048H21.6901C21.0181 83.048 20.4181 83.152 19.8901 83.36C19.3621 83.568 18.9461 83.928 18.6421 84.44C18.3541 84.952 18.2101 85.664 18.2101 86.576V92H15.1381ZM30.1548 92.288C29.0028 92.288 27.9628 92.024 27.0348 91.496C26.1228 90.968 25.3948 90.24 24.8508 89.312C24.3228 88.368 24.0588 87.28 24.0588 86.048C24.0588 84.816 24.3308 83.736 24.8748 82.808C25.4188 81.864 26.1468 81.128 27.0588 80.6C27.9868 80.072 29.0268 79.808 30.1788 79.808C31.3148 79.808 32.3388 80.072 33.2508 80.6C34.1788 81.128 34.9068 81.864 35.4348 82.808C35.9788 83.736 36.2508 84.816 36.2508 86.048C36.2508 87.28 35.9788 88.368 35.4348 89.312C34.9068 90.24 34.1788 90.968 33.2508 91.496C32.3228 92.024 31.2908 92.288 30.1548 92.288ZM30.1548 89.624C30.9548 89.624 31.6508 89.328 32.2428 88.736C32.8348 88.128 33.1308 87.232 33.1308 86.048C33.1308 84.864 32.8348 83.976 32.2428 83.384C31.6508 82.776 30.9628 82.472 30.1788 82.472C29.3628 82.472 28.6588 82.776 28.0668 83.384C27.4908 83.976 27.2028 84.864 27.2028 86.048C27.2028 87.232 27.4908 88.128 28.0668 88.736C28.6588 89.328 29.3548 89.624 30.1548 89.624ZM40.7015 78.248C40.1415 78.248 39.6775 78.08 39.3095 77.744C38.9575 77.408 38.7815 76.984 38.7815 76.472C38.7815 75.96 38.9575 75.544 39.3095 75.224C39.6775 74.888 40.1415 74.72 40.7015 74.72C41.2615 74.72 41.7175 74.888 42.0695 75.224C42.4375 75.544 42.6215 75.96 42.6215 76.472C42.6215 76.984 42.4375 77.408 42.0695 77.744C41.7175 78.08 41.2615 78.248 40.7015 78.248ZM36.7415 97.28V94.664H37.6775C38.2055 94.664 38.5815 94.56 38.8055 94.352C39.0295 94.144 39.1415 93.792 39.1415 93.296V80.096H42.2135V93.296C42.2135 94.736 41.8455 95.76 41.1095 96.368C40.3895 96.976 39.4055 97.28 38.1575 97.28H36.7415ZM51.2034 92.288C50.0034 92.288 48.9394 92.032 48.0114 91.52C47.0834 91.008 46.3554 90.288 45.8274 89.36C45.2994 88.432 45.0354 87.36 45.0354 86.144C45.0354 84.912 45.2914 83.816 45.8034 82.856C46.3314 81.896 47.0514 81.152 47.9634 80.624C48.8914 80.08 49.9794 79.808 51.2274 79.808C52.3954 79.808 53.4274 80.064 54.3234 80.576C55.2194 81.088 55.9154 81.792 56.4114 82.688C56.9234 83.568 57.1794 84.552 57.1794 85.64C57.1794 85.816 57.1714 86 57.1554 86.192C57.1554 86.384 57.1474 86.584 57.1314 86.792H48.0834C48.1474 87.72 48.4674 88.448 49.0434 88.976C49.6354 89.504 50.3474 89.768 51.1794 89.768C51.8034 89.768 52.3234 89.632 52.7394 89.36C53.1714 89.072 53.4914 88.704 53.6994 88.256H56.8194C56.5954 89.008 56.2194 89.696 55.6914 90.32C55.1794 90.928 54.5394 91.408 53.7714 91.76C53.0194 92.112 52.1634 92.288 51.2034 92.288ZM51.2274 82.304C50.4754 82.304 49.8114 82.52 49.2354 82.952C48.6594 83.368 48.2914 84.008 48.1314 84.872H54.0594C54.0114 84.088 53.7234 83.464 53.1954 83C52.6674 82.536 52.0114 82.304 51.2274 82.304ZM64.8562 92C63.6082 92 62.6082 91.696 61.8562 91.088C61.1042 90.48 60.7282 89.4 60.7282 87.848V82.664H58.6882V80.096H60.7282L61.0882 76.904H63.8002V80.096H67.0162V82.664H63.8002V87.872C63.8002 88.448 63.9202 88.848 64.1602 89.072C64.4162 89.28 64.8482 89.384 65.4562 89.384H66.9442V92H64.8562ZM75.0611 92.288C73.9091 92.288 72.8691 92.024 71.9411 91.496C71.0291 90.968 70.3011 90.24 69.7571 89.312C69.2291 88.368 68.9651 87.28 68.9651 86.048C68.9651 84.816 69.2371 83.736 69.7811 82.808C70.3251 81.864 71.0531 81.128 71.9651 80.6C72.8931 80.072 73.9331 79.808 75.0851 79.808C76.2211 79.808 77.2451 80.072 78.1571 80.6C79.0851 81.128 79.8131 81.864 80.3411 82.808C80.8851 83.736 81.1571 84.816 81.1571 86.048C81.1571 87.28 80.8851 88.368 80.3411 89.312C79.8131 90.24 79.0851 90.968 78.1571 91.496C77.2291 92.024 76.1971 92.288 75.0611 92.288ZM75.0611 89.624C75.8611 89.624 76.5571 89.328 77.1491 88.736C77.7411 88.128 78.0371 87.232 78.0371 86.048C78.0371 84.864 77.7411 83.976 77.1491 83.384C76.5571 82.776 75.8691 82.472 75.0851 82.472C74.2691 82.472 73.5651 82.776 72.9731 83.384C72.3971 83.976 72.1091 84.864 72.1091 86.048C72.1091 87.232 72.3971 88.128 72.9731 88.736C73.5651 89.328 74.2611 89.624 75.0611 89.624ZM97.3025 92.288C95.6065 92.288 94.1505 91.928 92.9345 91.208C91.7185 90.472 90.7825 89.456 90.1265 88.16C89.4705 86.848 89.1425 85.336 89.1425 83.624C89.1425 81.912 89.4705 80.4 90.1265 79.088C90.7825 77.776 91.7185 76.752 92.9345 76.016C94.1505 75.28 95.6065 74.912 97.3025 74.912C99.3185 74.912 100.967 75.416 102.247 76.424C103.543 77.416 104.351 78.816 104.671 80.624H101.286C101.079 79.712 100.631 79 99.9425 78.488C99.2705 77.96 98.3745 77.696 97.2545 77.696C95.7025 77.696 94.4865 78.224 93.6065 79.28C92.7265 80.336 92.2865 81.784 92.2865 83.624C92.2865 85.464 92.7265 86.912 93.6065 87.968C94.4865 89.008 95.7025 89.528 97.2545 89.528C98.3745 89.528 99.2705 89.288 99.9425 88.808C100.631 88.312 101.079 87.632 101.286 86.768H104.671C104.351 88.496 103.543 89.848 102.247 90.824C100.967 91.8 99.3185 92.288 97.3025 92.288ZM113.03 92.288C111.878 92.288 110.838 92.024 109.91 91.496C108.998 90.968 108.27 90.24 107.726 89.312C107.198 88.368 106.934 87.28 106.934 86.048C106.934 84.816 107.206 83.736 107.75 82.808C108.294 81.864 109.022 81.128 109.934 80.6C110.862 80.072 111.902 79.808 113.054 79.808C114.19 79.808 115.214 80.072 116.126 80.6C117.054 81.128 117.782 81.864 118.31 82.808C118.854 83.736 119.126 84.816 119.126 86.048C119.126 87.28 118.854 88.368 118.31 89.312C117.782 90.24 117.054 90.968 116.126 91.496C115.198 92.024 114.166 92.288 113.03 92.288ZM113.03 89.624C113.83 89.624 114.526 89.328 115.118 88.736C115.71 88.128 116.006 87.232 116.006 86.048C116.006 84.864 115.71 83.976 115.118 83.384C114.526 82.776 113.838 82.472 113.054 82.472C112.238 82.472 111.534 82.776 110.942 83.384C110.366 83.976 110.078 84.864 110.078 86.048C110.078 87.232 110.366 88.128 110.942 88.736C111.534 89.328 112.23 89.624 113.03 89.624ZM121.873 92V80.096H124.609L124.897 82.328C125.329 81.56 125.913 80.952 126.648 80.504C127.401 80.04 128.281 79.808 129.289 79.808V83.048H128.425C127.753 83.048 127.153 83.152 126.625 83.36C126.097 83.568 125.681 83.928 125.377 84.44C125.089 84.952 124.945 85.664 124.945 86.576V92H121.873ZM136.692 92C135.444 92 134.444 91.696 133.692 91.088C132.94 90.48 132.564 89.4 132.564 87.848V82.664H130.524V80.096H132.564L132.924 76.904H135.636V80.096H138.852V82.664H135.636V87.872C135.636 88.448 135.756 88.848 135.996 89.072C136.252 89.28 136.684 89.384 137.292 89.384H138.78V92H136.692ZM146.969 92.288C145.769 92.288 144.705 92.032 143.777 91.52C142.849 91.008 142.121 90.288 141.593 89.36C141.065 88.432 140.801 87.36 140.801 86.144C140.801 84.912 141.057 83.816 141.569 82.856C142.097 81.896 142.817 81.152 143.729 80.624C144.657 80.08 145.745 79.808 146.993 79.808C148.161 79.808 149.193 80.064 150.089 80.576C150.985 81.088 151.681 81.792 152.177 82.688C152.689 83.568 152.945 84.552 152.945 85.64C152.945 85.816 152.937 86 152.921 86.192C152.921 86.384 152.913 86.584 152.897 86.792H143.849C143.913 87.72 144.233 88.448 144.809 88.976C145.401 89.504 146.113 89.768 146.945 89.768C147.569 89.768 148.089 89.632 148.505 89.36C148.937 89.072 149.257 88.704 149.465 88.256H152.585C152.361 89.008 151.985 89.696 151.457 90.32C150.945 90.928 150.305 91.408 149.537 91.76C148.785 92.112 147.929 92.288 146.969 92.288ZM146.993 82.304C146.241 82.304 145.577 82.52 145.001 82.952C144.425 83.368 144.057 84.008 143.897 84.872H149.825C149.777 84.088 149.489 83.464 148.961 83C148.433 82.536 147.777 82.304 146.993 82.304ZM154.785 92L160.041 83.504L154.713 75.2H158.241L162.009 81.056L165.465 75.2H168.921L163.665 83.648L169.041 92H165.513L161.697 86.072L158.241 92H154.785ZM184.94 92.144C183.292 92.144 181.836 91.776 180.572 91.04C179.324 90.304 178.34 89.296 177.62 88.016C176.916 86.72 176.564 85.232 176.564 83.552C176.564 81.888 176.916 80.416 177.62 79.136C178.34 77.84 179.324 76.832 180.572 76.112C181.836 75.376 183.292 75.008 184.94 75.008C186.604 75.008 188.06 75.376 189.308 76.112C190.572 76.832 191.556 77.84 192.26 79.136C192.964 80.416 193.316 81.888 193.316 83.552C193.316 85.232 192.964 86.72 192.26 88.016C191.556 89.296 190.572 90.304 189.308 91.04C188.06 91.776 186.604 92.144 184.94 92.144ZM184.94 91.016C186.428 91.016 187.708 90.704 188.78 90.08C189.852 89.456 190.676 88.584 191.252 87.464C191.844 86.344 192.14 85.04 192.14 83.552C192.14 82.064 191.844 80.76 191.252 79.64C190.676 78.52 189.852 77.656 188.78 77.048C187.708 76.424 186.428 76.112 184.94 76.112C183.468 76.112 182.196 76.424 181.124 77.048C180.052 77.656 179.22 78.52 178.628 79.64C178.052 80.76 177.764 82.064 177.764 83.552C177.764 85.04 178.052 86.344 178.628 87.464C179.22 88.584 180.052 89.456 181.124 90.08C182.196 90.704 183.468 91.016 184.94 91.016ZM184.964 89.048C183.972 89.048 183.076 88.832 182.276 88.4C181.476 87.952 180.844 87.32 180.38 86.504C179.932 85.672 179.708 84.688 179.708 83.552C179.708 82.416 179.932 81.44 180.38 80.624C180.844 79.808 181.476 79.176 182.276 78.728C183.076 78.28 183.972 78.056 184.964 78.056C186.196 78.056 187.26 78.392 188.156 79.064C189.068 79.736 189.66 80.672 189.932 81.872H187.244C187.068 81.344 186.772 80.936 186.356 80.648C185.956 80.344 185.468 80.192 184.892 80.192C184.14 80.192 183.508 80.472 182.996 81.032C182.5 81.592 182.252 82.432 182.252 83.552C182.252 84.672 182.5 85.52 182.996 86.096C183.508 86.656 184.14 86.936 184.892 86.936C185.5 86.936 185.996 86.784 186.38 86.48C186.764 86.176 187.052 85.768 187.244 85.256H189.932C189.66 86.408 189.068 87.328 188.156 88.016C187.26 88.704 186.196 89.048 184.964 89.048Z"
+                            fill="white"
+                        />
+                        <rect
+                            x="50"
+                            width="63.4142"
+                            height="66"
+                            fill="url(#pattern0)"
+                        />
+                        <defs>
+                            <pattern
+                                id="pattern0"
+                                patternContentUnits="objectBoundingBox"
+                                width="1"
+                                height="1"
+                            >
+                                <use
+                                    xlink:href="#image0_0_1"
+                                    transform="scale(0.00194175 0.00186567)"
+                                />
+                            </pattern>
+                            <image
+                                id="image0_0_1"
+                                width="515"
+                                height="536"
+                                xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgMAAAIYCAMAAADHFB89AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADtUExURQAAAP///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////2wMkU8AAABOdFJOUwAIEBggKDA4PEBIUFVYXWBobXBxdHh5gIWHiIuMj5KWl5qdn6Snq6+xtbe4vr/Bx8vP0dPX2tze3+Hl5+jq6+zt7u/w8fLz9PX29/j6+0iD4k0AAAAJcEhZcwAAFxEAABcRAcom8z8AACDzSURBVHhe7Z19g+LIccZXvE0ExkzGHis4IRmbYGx8mEwyiXGI7TNen88633z/jxMJmoWZQTzVUkt6WqrfX3e7wApUqveq/tRKgjCMol88J/wqioZhx/yx0hY641/F+/3rF/b7776adM1fKs2nO/nqu8/m5l/wzbfPDz3zEqXRBD/94zfmrn/gu29+psqg+fzj17G54Vf5/o8/DcwrlWYy+t+/mJudSfz1j82LlQYS/ObP5kbf5K+/VYPQVHr//XdzlxG7O/MWpVmEvzd3WMAffmjepDSJH/3B3F8Rf/o38zalOfz8IiMk4S+/NG9UmsJPriSFbvO3n5u3Ks0gtDIER/Y/Mm9WmkDPwh0884fQvF3xn+B35q5a8nstHzSG30jzAu/5neaNG8JIlB28xvc/Mx+h+E2wM3c0B581a9wIfvxXc0Nz8Pd/Nx+i+EzwtbmfufjzwHyM4jH/erNfAPI/odaPfOcfCliCE/F6FT2qLHjI3ThaF3AHr7Bfz+41b+QHvTBaPJv75p6XVTTqm39JIaQ7nq2LOQBC1k8TFQQ+Bg+LrblD1bBfPqppoCEYRtU8/h9ZT0c6o1Q7w1l5xl/Gy9NIKwu10Z0sLBuEymKlQ0p1MJjWrQDe8jIb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"
+                            />
+                        </defs>
+                    </svg>
+                </a>
+
+                <p style="color: var(--paragraph)">
+                    ©2022 Projeto CorteX.<br />
+                    Todos os direitos reservados.
+                </p>
+            </div>
+
+            <div class="col-b">
+                <ul class="social-links">
+                    <li>
+                        <a target="_blank" href="https://instagram.com"
+                            ><svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M17 1.99997H7C4.23858 1.99997 2 4.23855 2 6.99997V17C2 19.7614 4.23858 22 7 22H17C19.7614 22 22 19.7614 22 17V6.99997C22 4.23855 19.7614 1.99997 17 1.99997Z"
+                                    stroke="#FFFAF1"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    d="M15.9997 11.3701C16.1231 12.2023 15.981 13.0523 15.5935 13.7991C15.206 14.5459 14.5929 15.1515 13.8413 15.5297C13.0898 15.908 12.2382 16.0397 11.4075 15.906C10.5768 15.7723 9.80947 15.3801 9.21455 14.7852C8.61962 14.1903 8.22744 13.4229 8.09377 12.5923C7.96011 11.7616 8.09177 10.91 8.47003 10.1584C8.84829 9.40691 9.45389 8.7938 10.2007 8.4063C10.9475 8.0188 11.7975 7.87665 12.6297 8.00006C13.4786 8.12594 14.2646 8.52152 14.8714 9.12836C15.4782 9.73521 15.8738 10.5211 15.9997 11.3701Z"
+                                    stroke="#FFFAF1"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    d="M17.5 6.49997H17.51"
+                                    stroke="#FFFAF1"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://facebook.com">
+                            <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M18 1.99997H15C13.6739 1.99997 12.4021 2.52675 11.4645 3.46444C10.5268 4.40212 10 5.67389 10 6.99997V9.99997H7V14H10V22H14V14H17L18 9.99997H14V6.99997C14 6.73475 14.1054 6.4804 14.2929 6.29286C14.4804 6.10533 14.7348 5.99997 15 5.99997H18V1.99997Z"
+                                    stroke="#FFFAF1"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://youtube.com">
+                            <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M22.5396 6.42C22.4208 5.94541 22.1789 5.51057 21.8382 5.15941C21.4976 4.80824 21.0703 4.55318 20.5996 4.42C18.8796 4 11.9996 4 11.9996 4C11.9996 4 5.1196 4 3.3996 4.46C2.92884 4.59318 2.50157 4.84824 2.16094 5.19941C1.82031 5.55057 1.57838 5.98541 1.4596 6.46C1.14481 8.20556 0.990831 9.97631 0.999595 11.75C0.988374 13.537 1.14236 15.3213 1.4596 17.08C1.59055 17.5398 1.8379 17.9581 2.17774 18.2945C2.51758 18.6308 2.93842 18.8738 3.3996 19C5.1196 19.46 11.9996 19.46 11.9996 19.46C11.9996 19.46 18.8796 19.46 20.5996 19C21.0703 18.8668 21.4976 18.6118 21.8382 18.2606C22.1789 17.9094 22.4208 17.4746 22.5396 17C22.852 15.2676 23.0059 13.5103 22.9996 11.75C23.0108 9.96295 22.8568 8.1787 22.5396 6.42Z"
+                                    stroke="#FFFAF1"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    d="M9.75 15.02L15.5 11.75L9.75 8.48001V15.02Z"
+                                    stroke="#FFFAF1"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.tiktok.com/pt-BR/">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                x="0px"
+                                y="0px"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 172 172"
+                                style="fill: #000000"
+                            >
+                                <g
+                                    fill="none"
+                                    fill-rule="nonzero"
+                                    stroke="none"
+                                    stroke-width="1"
+                                    stroke-linecap="butt"
+                                    stroke-linejoin="miter"
+                                    stroke-miterlimit="10"
+                                    stroke-dasharray=""
+                                    stroke-dashoffset="0"
+                                    font-family="none"
+                                    font-weight="none"
+                                    font-size="none"
+                                    text-anchor="none"
+                                    style="mix-blend-mode: normal"
+                                >
+                                    <path
+                                        d="M0,172v-172h172v172z"
+                                        fill="none"
+                                    ></path>
+                                    <g fill="#FFFAF1">
+                                        <path
+                                            d="M43,21.5c-11.78895,0 -21.5,9.71105 -21.5,21.5v86c0,11.78895 9.71105,21.5 21.5,21.5h86c11.78895,0 21.5,-9.71105 21.5,-21.5v-86c0,-11.78895 -9.71105,-21.5 -21.5,-21.5zM43,35.83333h86c4.04938,0 7.16667,3.11728 7.16667,7.16667v86c0,4.04938 -3.11729,7.16667 -7.16667,7.16667h-86c-4.04938,0 -7.16667,-3.11729 -7.16667,-7.16667v-86c0,-4.04938 3.11728,-7.16667 7.16667,-7.16667zM86,50.16667v50.16667c0,4.04938 -3.11728,7.16667 -7.16667,7.16667c-4.04938,0 -7.16667,-3.11728 -7.16667,-7.16667c0,-4.04938 3.11728,-7.16667 7.16667,-7.16667v-14.33333c-11.78895,0 -21.5,9.71105 -21.5,21.5c0,11.78895 9.71105,21.5 21.5,21.5c11.78895,0 21.5,-9.71105 21.5,-21.5v-27.00098c4.41573,3.14559 9.02368,5.50098 14.33333,5.50098v-14.33333c-0.33922,0 -5.28417,-1.56995 -8.73437,-4.57715c-3.45021,-3.0072 -5.59896,-6.78208 -5.59896,-9.75618z"
+                                        ></path>
+                                    </g>
+                                </g>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="mailto:proje.cortex@gmail.com">
+                            <svg
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z"
+                                            stroke="var(--headline)"
+                                            stroke-width="2"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                        <path
+                                            d="M22 6L12 13L2 6"
+                                            stroke="var(--headline)"
+                                            stroke-width="2"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                    </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <a id="backToTopButton" href="#home">
+        <svg
+            width="40"
+            height="40"
+            viewBox="0 0 40 40"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <circle cx="20" cy="20" r="20" fill="#00856F" />
+            <path
+                d="M20 27V13"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            />
+            <path
+                d="M13 20L20 13L27 20"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            />
+        </svg>
+    </a>
+    <!-- ScrollReaveal Lib -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="./platform.js"></script>
+</body>
+</html>
