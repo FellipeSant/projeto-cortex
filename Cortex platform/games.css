@@ -58,10 +58,6 @@ ul {
   list-style: none;
 }
 
-img {
-  max-width: 100%;
-}
-
 section {
   padding-block: 10rem;
   background-color: var(--primary-color);
@@ -276,6 +272,8 @@ body.menu-expanded button path {
 /*=== HOME =================================*/
 
 #home {
+  height: 73.5rem;
+
   padding-block: 0;
   padding-top: calc(4.1rem + var(--nav-height));
   background-color: var(--brand-beige);
@@ -302,14 +300,25 @@ body.menu-expanded button path {
     margin-bottom: 3.2rem;
 }
 
-#home img{
-    width: auto;
-    height: 32rem;
+#home ul{
+  display: flex;
+  flex-direction: column;
 }
 
-#home img.wolverine{
-    margin-left: 3.2rem;
+#img-1 img{
+  width: auto;
+  height: 23rem;
+
+  margin-bottom: 3.2rem;
 }
+#img-2 img{
+  width: auto;
+  height: 23rem;
+
+  margin-bottom: 4.8rem;
+}
+
+
 
 /*=== FOOTER =================================*/
 footer {
@@ -535,13 +544,9 @@ nav#navigation .logo img{
   margin-bottom: 3.2rem;
 }
 
-#home img{
-  width: auto;
-  height: 32rem;
-}
-
-#home img.wolverine{
-  margin-left: 3.2rem;
+#home ul{
+  display: flex;
+  flex-direction: column;
 }
 
 /*=== FOOTER =================================*/
